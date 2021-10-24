@@ -72,7 +72,7 @@ dark.addEventListener('change', function doit() {
 
 if(localStorage.getItem('darkMode') == 'enabled'){
     alert("here we go!");
-    dark.checked = true;
+    dark.click();
 }
 
 
