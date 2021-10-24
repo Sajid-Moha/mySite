@@ -61,17 +61,16 @@ const dark = document.querySelector("input[name=darkMode_checker]");
 dark.addEventListener('change', function doit() {
     if (this.checked) {
         darkMode();
-        localStorage.setItem('darkmode', 'enabled');
+        window.localStorage.setItem('darkmode', 'enabled');
     }
     else {
         darkMode();
-        localStorage.setItem('darkmode', 'disabled');
+        window.localStorage.setItem('darkmode', 'disabled');
     }
 })
 
 
-if(localStorage.getItem('darkmode') == 'enabled'){
+if(window.localStorage.getItem('darkmode') == 'enabled'){
+    alert("here we go!");
     dark.click();
 }
-
-
