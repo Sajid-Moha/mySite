@@ -71,6 +71,5 @@ dark.addEventListener('change', function doit() {
 
 
 if(window.localStorage.getItem('darkmode') == 'enabled'){
-    alert("here we go!");
     dark.click();
 }
