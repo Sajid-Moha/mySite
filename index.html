@@ -1,4 +1,8 @@
 <!-- SVG sun/moon Icons from https://materialdesignicons.com/-->
+<!-- Base website design taken from Kevin Powell on FreeCodeCamp.org -->
+<!-- improved base design with dark mode switch + animation; saving dark mode setting in local memory;
+auto-scroll up button; adjustments to flex layout; & logo functionality -->
+
 <!DOCTYPE html>
 
 <html lang="en">
@@ -22,7 +26,7 @@
     <body>
         <header>
             <div class = "logo">
-                <a href="index.html">
+                <a href="index2.html">
                     <img src="imgs/MyLogo.png.png">
                 </a>
             </div>
@@ -32,7 +36,7 @@
             <nav class="nav">
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="#services" class="nav__link">Experience</a></li>
+                    <li class="nav__item"><a href="#education_section" class="nav__link">Education</a></li>
                     <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
                     <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
                     <!-- <button class="nav__item" id="dark_mode"><strong>Dark Mode</strong></button> -->
@@ -60,38 +64,38 @@
                 Hi, I'm <strong>Sajid M</strong>
             </h1>
             <p class="section__substitle section__subtitle--intro">front-end dev</p>
-            <img src="imgs/Dray_logo.jpg" alt="Picture of Draymond Smiling" class="intro__img">
+            <img src="imgs/myFaceSite.png" alt="Profile shot photo" class="intro__img">
         </section>
 
-        <!-- Services-->
-        <section class = "my-services" id="services">
-            <h2 class="section__title section__title-services">What I do</h2>
-            <div class="services">
-                <div class="service">
+        <!-- Education-->
+        <section class = "my-education" id="education_section">
+            <h2 class="section__title section__title-education">Education & Additional Coursework</h2>
+            <div class="coursework">
+                <div class="course">
                     <h3>
-                        Personal Website
+                        James Logan High School
                     </h3>
                     <p>
                         Suspendisse fringilla a liquam arcu, non lacinia elit maximus eget. Vivamus eget ante aliquam, mollis turpis laoreet, venenatis tortor. Fusce tortor dui, ultrices non diam sed, pulvinar rutrum sapien. Suspendisse potenti. Duis porta quis arcu ac facilisis. Duis sit amet finibus mauris. Nullam at odio urna. Pellentesque condimentum ut erat vestibulum commodo. Nullam consequat ante et sagittis varius. Donec in enim nec tellus laoreet lacinia vitae et enim. Sed varius felis metus, non ultricies velit convallis vel. Pellentesque at fringilla massa.
                     </p>
-                </div> <!-- /service-->
-                <div class="service">
+                </div> <!-- /course-->
+                <div class="course">
                     <h3>
-                        Webscraper
+                        UC Davis
                     </h3>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sodales imperdiet enim viverra feugiat. Proin sed placerat lectus, et porta augue. Quisque eget enim quis ante laoreet cursus vitae a nulla. Vestibulum commodo ultrices leo, a pretium nibh. Nam viverra eget leo et euismod. Quisque vel odio eu ipsum iaculis cursus bibendum ut velit. Cras vel laoreet sapien, sit amet feugiat augue. Morbi suscipit suscipit mollis. Nunc rhoncus leo ipsum, non sagittis sem tincidunt in. Integer pharetra suscipit erat, vitae commodo massa blandit eu. Donec lobortis massa non ex molestie pharetra. Phasellus sed eleifend sem. Nulla vel augue a sapien ultrices ultrices laoreet nec leo.
                     </p>
-                </div> <!-- /service-->
-                <div class="service">
+                </div> <!-- /course-->
+                <div class="course">
                     <h3>
-                        Tic Tac Toe
+                        HarvardX CS50x
                     </h3>
                     <p>
                         Vestibulum ut metus sollicitudin, porta neque rutrum, placerat dui. Suspendisse potenti. Curabitur nec urna dolor. Nunc ultrices est id fringilla dictum. Sed egestas tristique lorem, eu sagittis nibh accumsan eget. Nullam posuere eleifend sem in volutpat. Maecenas quis orci fringilla augue auctor fermentum sed nec est. Sed commodo enim augue, non gravida turpis volutpat ac. Maecenas auctor eros a hendrerit luctus.
                     </p>
-                </div> <!-- /service-->
-            </div> <!-- end of services-->
+                </div> <!-- /course-->
+            </div> <!-- end of courses-->
 
             <a href="#work" class="btn">My Work</a>
         </section>
@@ -99,32 +103,32 @@
         <!-- About Me-->
         <section class="about-me" id="about">
             <h2 class="section__title section__title--about">Who I am</h2>
-            <p class="section__subtitle section__subtitle--about styled__subtitle">An NBA player from Michigan</p>
+            <p class="section__subtitle section__subtitle--about styled__subtitle">A CS Major at UC Davis</p>
             <div class="about-me__body">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sodales imperdiet enim viverra feugiat.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sodales imperdiet enim viverra feugiat.</p>
+                <p class="paragraph">I’m Sajid, an aspiring software developer studying Computer Science at UC Davis! I’m a second generation American from Union City, California. Outside of programming, I enjoy being outdoors, playing basketball, and spending time with family & friends. Some extracurricular topics I enjoy learning about include cars, electronic repair, and cooking.</p>
+                <p class="paragraph">My main goal as a programmer at the moment is improving every day. I've spent this past summer learning and applying different coding languages. The languages I use most at the moment are Python, HTML/CSS, and JavaScript. My next steps are learning React JS, using SQL in a personal project, and making more complex programs in Python. I have a few projects that I've worked on recently, scroll down to check them out!</p>
             </div>
 
-            <img src="imgs/dray_shot.jpg" alt="Dray's jumpshot" class="about-me__img">
+            <img src="imgs/standing_man.png" alt="Standing pose photo" class="about-me__img fillWhite">
         </section>
 
         <!-- My work-->
         <section class = "my-work" id="work">
             <h2 class="section__title">My Work</h2>
-            <p class="section__subtitle section__substitle--work">A few of my many accomplishments.</p>
+            <p class="section__subtitle section__substitle--work">A few projects I've done over the last few months.</p>
 
             <div class="portfolio">
                 <!--Portfolio item 1-->
                 <a href="#" class="portfolio__item">
-                    <img src="./imgs/champs_2015_edit.jpg" alt="NBA Champion 2015" class="portfolio__img">
+                    <img src="./imgs/personalSiteProject.png" alt="My portfolio site" class="portfolio__img">
                 </a>
 
                 <a href="#" class="portfolio__item">
-                    <img src="./imgs/champs_2017_edit.jpg" alt="NBA Champion 2017" class="portfolio__img">
+                    <img src="./imgs/incomplete_loading.png" alt="Missing image!" class="portfolio__img">
                 </a>
 
                 <a href="#" class="portfolio__item">
-                    <img src="./imgs/champs_2018_edit.jpg" alt="NBA Champion 2018" class="portfolio__img">
+                    <img src="./imgs/ticTacToeProject.png" alt="TicTacToe with graphical user interface" class="portfolio__img">
                 </a>
             </div>
         </section>
@@ -132,22 +136,17 @@
         <!-- footer -->
         <footer class = "footer">
             <!--email stuff-->
-            <a href="mailto:sajidmoha03@gmail.com" class="footer__link">Sajid@mail.com</a>
+            <a href="mailto:sajidmoha03@gmail.com" class="footer__link">SajidM03@gmail.com</a>
             <!--social stuff-->
             <ul class="social-list">
                 <li class="social-list__item">
-                    <a class="social-list__link" href="https://www.facebook.com">
-                        <i class="fab fa-facebook-f"></i>
+                    <a class="social-list__link" href="http://www.linkedin.com/in/sajidm03" target="_blank">
+                        <i class="fab fa-linkedin"></i>
                     </a>
                 </li>
                 <li class="social-list__item">
-                    <a class="social-list__link" href="https://www.twitter.com">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </li>
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://www.instagram.com">
-                        <i class="fab fa-instagram"></i>
+                    <a class="social-list__link" href="https://github.com/Sajid-Moha" target="_blank">
+                        <i class="fab fa-github"></i>
                     </a>
                 </li>
             </ul>
