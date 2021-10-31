@@ -1,4 +1,3 @@
-/* things to learn: grid */
 *, 
 *::before,
  *::after
@@ -15,6 +14,7 @@
     --fw-reg: 300;
     --fw-bold: 900;
 
+    --clr-title: #303030;
     --clr-light: #fff;
     --clr-dark: #303030;
     --clr-accent: #16e0be;
@@ -118,6 +118,12 @@ h1 { font-size: var(--fs-h1) }
 h2 { font-size: var(--fs-h2) }
 h3 { font-size: var(--fs-h3) }
 
+/* new */
+.smallText {
+    font-size: .75rem;
+}
+/* end of new */
+
 .section__title
 {
     margin-bottom: .25em;
@@ -126,6 +132,7 @@ h3 { font-size: var(--fs-h3) }
 .section__title--intro
 {
     font-weight: var(--fw-reg);
+    color: var(--clr-title);
 }
 
 .section__title--intro strong
@@ -161,6 +168,12 @@ h3 { font-size: var(--fs-h3) }
     font-weight: var(--fw-bold);
     margin-bottom: 2em;
 }
+
+/* new */
+.paragraph {
+    text-indent: 5%;
+}
+/* end of new */
 
 /* header */
 header {
@@ -402,8 +415,9 @@ svg.moon.dark {
     }
 }
 
-/* Services */
-.my-services {
+/* Change: Services --> education */
+/* Education */
+.my-education {
     /* background-color: var(--clr-dark); */
     background-color:#474747;;
     background-image: url(../imgs/dubs_court.jpg.jpg);
@@ -414,12 +428,12 @@ svg.moon.dark {
     text-align: center;
 }
 
-.section__title-services{
+.section__title-education{
     color: var(--clr-accent);
     position: relative;
 }
 
-.section__title-services::after {
+.section__title-education::after {
     content: '';
     display: block;
     width: 2em;
@@ -429,24 +443,24 @@ svg.moon.dark {
     opacity: 0.25;
 }
 
-.services {
+.coursework {
     margin-bottom: 4em;
 }
 
-.service {
+.course {
     max-width: 500px;
     margin: 0 auto;
 }
 
 @media (min-width: 860px) {
-    .services {
+    .coursework {
         display: flex;
         max-width: 1000px;
         margin-left: auto;
         margin-right: auto;
     }
 
-    .service + .service {
+    .course + .course {
         margin-left: 2em;
     }
 }
@@ -510,6 +524,12 @@ svg.moon.dark {
     background: var(--clr-accent);
     overflow: hidden;
 }
+
+/* new */
+.portfolio__img {
+    height: 100%;
+}
+/* end of new */
 
 .portfolio__img {
     transition: 
@@ -614,6 +634,24 @@ svg.moon.dark {
     transform: rotate(45deg);
 }
 
+/* new */
+@media (max-width: 700px) {
+    .scroll_top {
+        visibility: hidden;
+    }
+}
+/* end of new */
+
 .hide {
     opacity: 0;
+}
+
+
+/* temporary */
+.fillWhite {
+    background-color: white;
+}
+
+.portfolio__img {
+    width: 100%;
 }
