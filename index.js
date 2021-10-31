@@ -35,6 +35,7 @@ function darkMode() {
     moonToggle.classList.toggle('dark');
     // toggle between the variable being 1 & 0  to determine which colors to change vars to
     if (toggleChecker == 0) {
+        root.style.setProperty('--clr-title', '#eee');
         root.style.setProperty('--clr-light', '#333333');
         root.style.setProperty('--clr-dark', '#121212'); 
         root.style.setProperty('--clr-accent', '#3DECCF');
@@ -43,6 +44,7 @@ function darkMode() {
         toggleChecker = 1;
     }
     else {
+        root.style.setProperty('--clr-title', '#303030')
         root.style.setProperty('--clr-light', '#fff');
         root.style.setProperty('--clr-dark', '#303030'); 
         root.style.setProperty('--clr-accent', '#16e0be');
@@ -73,3 +75,5 @@ dark.addEventListener('change', function doit() {
 if(window.localStorage.getItem('darkmode') == 'enabled'){
     dark.click();
 }
+
+
