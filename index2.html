@@ -1,0 +1,251 @@
+<!-- SVG sun/moon Icons from https://materialdesignicons.com/-->
+<!-- Base website design taken from Kevin Powell on FreeCodeCamp.org -->
+<!-- improved base design with dark mode switch + animation; saving dark mode setting in local memory;
+auto-scroll up button; adjustments to flex layout; & logo functionality -->
+
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+        <title>
+            My Portfolio!
+        </title>
+        <link href="normalize.css" rel="stylesheet">
+        <link href="CSS/style.css" rel="stylesheet">
+        <link href="./CSS/modals.css" rel="stylesheet">
+        <!-- For Social Buttons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.css"
+         integrity="sha512-4wfcoXlib1Aq0mUtsLLM74SZtmB73VHTafZAvxIp/Wk9u1PpIsrfmTvK0+yKetghCL8SHlZbMyEcV8Z21v42UQ=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <!--Fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:400,00|Source-Sans+Pro:300,900&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <header>
+            <div class = "logo">
+                <a href="index2.html">
+                    <img src="imgs/MyLogo.png.png">
+                </a>
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+                    <li class="nav__item"><a href="#education_section" class="nav__link">Education</a></li>
+                    <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
+                    <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
+                    <!-- <button class="nav__item" id="dark_mode"><strong>Dark Mode</strong></button> -->
+                    <label class="dark_switch">
+                        <input type="checkbox" name="darkMode_checker">
+                        <span class="slider"></span>
+                    </label>
+                </ul>
+                <!-- new -->
+                <div class="sun-moon_container" id="mode_rotation">
+                    <svg class = "sun" id="sun" viewBox="0 0 24 24">
+                        <path d="M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9M12,2L14.39,5.42C13.65,5.15 12.84,5 12,5C11.16,5 10.35,5.15 9.61,5.42L12,2M3.34,7L7.5,6.65C6.9,7.16 6.36,7.78 5.94,8.5C5.5,9.24 5.25,10 5.11,10.79L3.34,7M3.36,17L5.12,13.23C5.26,14 5.53,14.78 5.95,15.5C6.37,16.24 6.91,16.86 7.5,17.37L3.36,17M20.65,7L18.88,10.79C18.74,10 18.47,9.23 18.05,8.5C17.63,7.78 17.1,7.15 16.5,6.64L20.65,7M20.64,17L16.5,17.36C17.09,16.85 17.62,16.22 18.04,15.5C18.46,14.77 18.73,14 18.87,13.21L20.64,17M12,22L9.59,18.56C10.33,18.83 11.14,19 12,19C12.82,19 13.63,18.83 14.37,18.56L12,22Z" />
+                    </svg>
+                    <svg class="moon" id="moon" viewBox="0 0 24 24">
+                        <path d="M17.75,4.09L15.22,6.03L16.13,9.09L13.5,7.28L10.87,9.09L11.78,6.03L9.25,4.09L12.44,4L13.5,1L14.56,4L17.75,4.09M21.25,11L19.61,12.25L20.2,14.23L18.5,13.06L16.8,14.23L17.39,12.25L15.75,11L17.81,10.95L18.5,9L19.19,10.95L21.25,11M18.97,15.95C19.8,15.87 20.69,17.05 20.16,17.8C19.84,18.25 19.5,18.67 19.08,19.07C15.17,23 8.84,23 4.94,19.07C1.03,15.17 1.03,8.83 4.94,4.93C5.34,4.53 5.76,4.17 6.21,3.85C6.96,3.32 8.14,4.21 8.06,5.04C7.79,7.9 8.75,10.87 10.95,13.06C13.14,15.26 16.1,16.22 18.97,15.95M17.33,17.97C14.5,17.81 11.7,16.64 9.53,14.5C7.36,12.31 6.2,9.5 6.04,6.68C3.23,9.82 3.34,14.64 6.35,17.66C9.37,20.67 14.19,20.78 17.33,17.97Z" />
+                    </svg>
+                </div>
+                <!-- end of new -->
+            </nav>
+        </header>
+
+        <!-- introduction-->
+        <section class="intro" id="home">
+            <h1 class="section__title section__title--intro">
+                Hi, I'm <strong>Sajid M</strong>
+            </h1>
+            <p class="section__substitle section__subtitle--intro">front-end dev</p>
+            <img src="imgs/myFaceSite.png" alt="Profile shot photo" class="intro__img">
+        </section>
+
+        <!-- Education-->
+        <section class = "my-education" id="education_section">
+            <h2 class="section__title section__title-education">Education</h2>
+            <div class="coursework">
+                <div class="course JLHS" onmouseover="JLHS_bg_change()" onmouseleave="JLHS_bg_revert()">
+                    <h3>
+                        James Logan High School
+                    </h3>
+                    <p class="small_text">August 2017 - May 2021</p>
+                    <p>
+                        GPA: 4.55 W / 4.0 UW
+                    </p>
+                    <p>
+                        Relevant Coursework:
+                        <ul>
+                            <li>
+                                AP Computer Science
+                            </li>
+                            <li>
+                                Multivariable Calculus and Differential Equations
+                            </li>
+                            <li>
+                                AP Calculus BC
+                            </li>
+                        </ul>
+                    </p>
+                </div> <!-- /course-->
+                <div class="course OHLONE" onmouseover="ohlone_bg_change()" onmouseleave="ohlone_bg_revert()">
+                    <h3>
+                        Ohlone College
+                    </h3>
+                    <p class="small_text">August 2020 - May 2021</p>
+                    <p>
+                        GPA: 4.0 / 4.0
+                    </p>
+                    <p>
+                        Dual Enrollment Classes:
+                        <ul>
+                            <li>
+                                Multivariable Calculus
+                            </li>
+                            <li>
+                                Differential Equations
+                            </li>
+                        </ul>
+                    </p>
+                </div> <!-- /course-->
+                <div class="course UCD" onmouseover="UCD_bg_change()" onmouseleave="UCD_bg_revert()">
+                    <h3>
+                        UC Davis
+                        </h3>
+                    <p class="small_text">
+                        Freshman, Class of 2025
+                    </p>
+                    <p>Planned Relevant Coursework This Year:
+                        <ul>
+                            <li>Linear Algebra</li> 
+                            <li>Programming and Problem Solving</li>
+                            <li>Software Development and Object-Oriented Programming in C++</li>
+                            <li>Discrete Mathematics for CS</li>
+                            <li> Data Structures, Algorithms, & Programming</li>
+                        </ul>
+                    </p>
+                </div> <!-- /course-->
+            </div> <!-- end of courses-->
+
+            <a href="#work" class="btn">My Work</a>
+        </section>
+
+        <!-- About Me-->
+        <section class="about-me" id="about">
+            <h2 class="section__title section__title--about">Who I am</h2>
+            <p class="section__subtitle section__subtitle--about styled__subtitle">A CS Major at UC Davis</p>
+            <div class="about-me__body">
+                <p class="paragraph">I’m Sajid, an aspiring software developer from Union City, California, studying Computer Science at UC Davis! Outside of programming, I enjoy being outdoors; playing basketball; and spending time with my family & friends. Some extracurricular topics I enjoy learning about include cars, electronic repair, and cooking.</p>
+                <p class="paragraph">My main goal as a programmer at the moment is improving every day. I've spent this past summer learning and applying different coding languages. The languages I use most at the moment are Python, HTML/CSS, and JavaScript. My next steps are learning React JS, using SQL in a personal project, and making more complex programs in Python. I have a few projects that I've worked on recently, scroll down to check them out!</p>
+            </div>
+
+            <img src="imgs/standing_man.png" alt="Standing pose photo" class="about-me__img fillWhite">
+        </section>
+
+        <!-- My work-->
+        <section class = "my-work" id="work">
+            <h2 class="section__title">My Work</h2>
+            <p class="section__subtitle section__substitle--work">A few projects I've done over the last few months.</p>
+
+            <div class="portfolio">
+                <!--Portfolio item 1-->
+                <a id="mod_item1" class="portfolio__item">
+                    <img src="./imgs/personalSiteProject.png" alt="My portfolio site" class="portfolio__img">
+                </a>
+
+                <a id="mod_item2" class="portfolio__item">
+                    <img src="./imgs/ScraperTool.png" alt="Missing image!" class="portfolio__img">
+                </a>
+
+                <a id="mod_item3" class="portfolio__item">
+                    <img src="./imgs/ticTacToeProject.png" alt="TicTacToe with graphical user interface" class="portfolio__img">
+                </a>
+            </div>
+            <!--Modals for each project-->
+            <div id="myModal_1" class="modal">
+                <div class="modalContent">
+                    <span class="close">&times;</span>
+                    <H3>Portfolio Site</H3>
+                    <p>
+                        <ul>
+                            <li>Created a personal website with responsive design utilizing HTML, CSS, and JavaScript.</li>
+                            <li>
+                                Implemented hamburger navigation menu; dark mode switch with animation; auto-scroll button; smooth transitions; and
+                                complex layouts using grid and flexbox.
+                            </li>
+                            <li>
+                                Employed localstorage JavaScript property to save dark mode preference in browser
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div id="myModal_2" class="modal">
+                <div class="modalContent">
+                    <span class="close">&times;</span>
+                    <H3>WebScraper</H3>
+                    <p>
+                        <ul>
+                            <li>
+                                Programmed a web scraping tool using the BeautifulSoup, Requests, & Re libraries in Python.
+                            </li>
+                            <li>
+                                Utilized BeautifulSoup’s HTML DOM parsing abilities to scrape item prices from Newegg.com; program displays the
+                                products’ names and information sorted by price
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div id="myModal_3" class="modal">
+                <div class="modalContent">
+                    <span class="close">&times;</span>
+                    <H3>Graphical Tic-Tac-Toe with AI</H3>
+                    <p>
+                        <ul>
+                            <li>
+                                Designed and developed a graphical tic-tac-toe program that accepts mouse input in Python.
+                            </li>
+                            <li>
+                                Implemented graphical user interface and event listeners using the Pygame library.
+                            </li>
+                            <li>
+                                Can be played PVP locally or against unbeatable artificial intelligence implemented via minimax algorithm.
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+        </section>
+        <!-- end of modals -->
+        <!-- footer -->
+        <footer class = "footer">
+            <!--email stuff-->
+            <a href="mailto:sajidmoha03@gmail.com" class="footer__link">SajidM03@gmail.com</a>
+            <!--social stuff-->
+            <ul class="social-list">
+                <li class="social-list__item">
+                    <a class="social-list__link" href="http://www.linkedin.com/in/sajidm03" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                </li>
+                <li class="social-list__item">
+                    <a class="social-list__link" href="https://github.com/Sajid-Moha" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+            </ul>
+        </footer>
+
+        <a class="scroll_top" href="#top" id = "autoScroll"></a>
+        <script src="./JS/index.js"></script>
+        <script src="./JS/modals.js"></script>
+    </body>
+</html>
