@@ -15,6 +15,7 @@ auto-scroll up button; adjustments to flex layout; & logo functionality -->
         </title>
         <link href="normalize.css" rel="stylesheet">
         <link href="CSS/style.css" rel="stylesheet">
+        <link href="./CSS/modals.css" rel="stylesheet">
         <!-- For Social Buttons -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.css"
          integrity="sha512-4wfcoXlib1Aq0mUtsLLM74SZtmB73VHTafZAvxIp/Wk9u1PpIsrfmTvK0+yKetghCL8SHlZbMyEcV8Z21v42UQ=="
@@ -37,8 +38,8 @@ auto-scroll up button; adjustments to flex layout; & logo functionality -->
                 <ul class="nav__list">
                     <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
                     <li class="nav__item"><a href="#education_section" class="nav__link">Education</a></li>
-                    <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
                     <li class="nav__item"><a href="#about" class="nav__link">About Me</a></li>
+                    <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
                     <!-- <button class="nav__item" id="dark_mode"><strong>Dark Mode</strong></button> -->
                     <label class="dark_switch">
                         <input type="checkbox" name="darkMode_checker">
@@ -63,36 +64,72 @@ auto-scroll up button; adjustments to flex layout; & logo functionality -->
             <h1 class="section__title section__title--intro">
                 Hi, I'm <strong>Sajid M</strong>
             </h1>
-            <p class="section__substitle section__subtitle--intro">Aspriring Dev</p>
+            <p class="section__substitle section__subtitle--intro">front-end dev</p>
             <img src="imgs/myFaceSite.png" alt="Profile shot photo" class="intro__img">
         </section>
 
         <!-- Education-->
         <section class = "my-education" id="education_section">
-            <h2 class="section__title section__title-education">Education & Additional Coursework</h2>
+            <h2 class="section__title section__title-education">Education</h2>
             <div class="coursework">
-                <div class="course">
+                <div class="course JLHS" onmouseover="JLHS_bg_change()" onmouseleave="JLHS_bg_revert()">
                     <h3>
                         James Logan High School
                     </h3>
+                    <p class="small_text">August 2017 - May 2021</p>
                     <p>
-                        Suspendisse fringilla a liquam arcu, non lacinia elit maximus eget. Vivamus eget ante aliquam, mollis turpis laoreet, venenatis tortor. Fusce tortor dui, ultrices non diam sed, pulvinar rutrum sapien. Suspendisse potenti. Duis porta quis arcu ac facilisis. Duis sit amet finibus mauris. Nullam at odio urna. Pellentesque condimentum ut erat vestibulum commodo. Nullam consequat ante et sagittis varius. Donec in enim nec tellus laoreet lacinia vitae et enim. Sed varius felis metus, non ultricies velit convallis vel. Pellentesque at fringilla massa.
+                        GPA: 4.55 W / 4.0 UW
+                    </p>
+                    <p>
+                        Relevant Coursework:
+                        <ul>
+                            <li>
+                                AP Computer Science
+                            </li>
+                            <li>
+                                Multivariable Calculus and Differential Equations
+                            </li>
+                            <li>
+                                AP Calculus BC
+                            </li>
+                        </ul>
                     </p>
                 </div> <!-- /course-->
-                <div class="course">
+                <div class="course OHLONE" onmouseover="ohlone_bg_change()" onmouseleave="ohlone_bg_revert()">
+                    <h3>
+                        Ohlone College
+                    </h3>
+                    <p class="small_text">August 2020 - May 2021</p>
+                    <p>
+                        GPA: 4.0 / 4.0
+                    </p>
+                    <p>
+                        Dual Enrollment Classes:
+                        <ul>
+                            <li>
+                                Multivariable Calculus
+                            </li>
+                            <li>
+                                Differential Equations
+                            </li>
+                        </ul>
+                    </p>
+                </div> <!-- /course-->
+                <div class="course UCD" onmouseover="UCD_bg_change()" onmouseleave="UCD_bg_revert()">
                     <h3>
                         UC Davis
-                    </h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sodales imperdiet enim viverra feugiat. Proin sed placerat lectus, et porta augue. Quisque eget enim quis ante laoreet cursus vitae a nulla. Vestibulum commodo ultrices leo, a pretium nibh. Nam viverra eget leo et euismod. Quisque vel odio eu ipsum iaculis cursus bibendum ut velit. Cras vel laoreet sapien, sit amet feugiat augue. Morbi suscipit suscipit mollis. Nunc rhoncus leo ipsum, non sagittis sem tincidunt in. Integer pharetra suscipit erat, vitae commodo massa blandit eu. Donec lobortis massa non ex molestie pharetra. Phasellus sed eleifend sem. Nulla vel augue a sapien ultrices ultrices laoreet nec leo.
+                        </h3>
+                    <p class="small_text">
+                        Freshman, Class of 2025
                     </p>
-                </div> <!-- /course-->
-                <div class="course">
-                    <h3>
-                        HarvardX CS50x
-                    </h3>
-                    <p>
-                        Vestibulum ut metus sollicitudin, porta neque rutrum, placerat dui. Suspendisse potenti. Curabitur nec urna dolor. Nunc ultrices est id fringilla dictum. Sed egestas tristique lorem, eu sagittis nibh accumsan eget. Nullam posuere eleifend sem in volutpat. Maecenas quis orci fringilla augue auctor fermentum sed nec est. Sed commodo enim augue, non gravida turpis volutpat ac. Maecenas auctor eros a hendrerit luctus.
+                    <p>Planned Relevant Coursework This Year:
+                        <ul>
+                            <li>Linear Algebra</li> 
+                            <li>Programming and Problem Solving</li>
+                            <li>Software Development and Object-Oriented Programming in C++</li>
+                            <li>Discrete Mathematics for CS</li>
+                            <li> Data Structures, Algorithms, & Programming</li>
+                        </ul>
                     </p>
                 </div> <!-- /course-->
             </div> <!-- end of courses-->
@@ -105,7 +142,7 @@ auto-scroll up button; adjustments to flex layout; & logo functionality -->
             <h2 class="section__title section__title--about">Who I am</h2>
             <p class="section__subtitle section__subtitle--about styled__subtitle">A CS Major at UC Davis</p>
             <div class="about-me__body">
-                <p class="paragraph">I’m Sajid, an aspiring software developer studying Computer Science at UC Davis! I’m a second-generation American from Union City, California. Outside of programming, I enjoy being outdoors, playing basketball, and spending time with family & friends. Some extracurricular topics I enjoy learning about include cars, electronic repair, and cooking.</p>
+                <p class="paragraph">I’m Sajid, an aspiring software developer from Union City, California, studying Computer Science at UC Davis! Outside of programming, I enjoy being outdoors; playing basketball; and spending time with my family & friends. Some extracurricular topics I enjoy learning about include cars, electronic repair, and cooking.</p>
                 <p class="paragraph">My main goal as a programmer at the moment is improving every day. I've spent this past summer learning and applying different coding languages. The languages I use most at the moment are Python, HTML/CSS, and JavaScript. My next steps are learning React JS, using SQL in a personal project, and making more complex programs in Python. I have a few projects that I've worked on recently, scroll down to check them out!</p>
             </div>
 
@@ -119,20 +156,75 @@ auto-scroll up button; adjustments to flex layout; & logo functionality -->
 
             <div class="portfolio">
                 <!--Portfolio item 1-->
-                <a href="#" class="portfolio__item">
+                <a id="mod_item1" class="portfolio__item">
                     <img src="./imgs/personalSiteProject.png" alt="My portfolio site" class="portfolio__img">
                 </a>
 
-                <a href="#" class="portfolio__item">
-                    <img src="./imgs/incomplete_loading.png" alt="Missing image!" class="portfolio__img">
+                <a id="mod_item2" class="portfolio__item">
+                    <img src="./imgs/ScraperTool.png" alt="Missing image!" class="portfolio__img">
                 </a>
 
-                <a href="#" class="portfolio__item">
+                <a id="mod_item3" class="portfolio__item">
                     <img src="./imgs/ticTacToeProject.png" alt="TicTacToe with graphical user interface" class="portfolio__img">
                 </a>
             </div>
+            <!--Modals for each project-->
+            <div id="myModal_1" class="modal">
+                <div class="modalContent">
+                    <span class="close">&times;</span>
+                    <H3>Portfolio Site</H3>
+                    <p>
+                        <ul>
+                            <li>Created a personal website with responsive design utilizing HTML, CSS, and JavaScript.</li>
+                            <li>
+                                Implemented hamburger navigation menu; dark mode switch with animation; auto-scroll button; smooth transitions; and
+                                complex layouts using grid and flexbox.
+                            </li>
+                            <li>
+                                Employed localstorage JavaScript property to save dark mode preference in browser
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div id="myModal_2" class="modal">
+                <div class="modalContent">
+                    <span class="close">&times;</span>
+                    <H3>WebScraper</H3>
+                    <p>
+                        <ul>
+                            <li>
+                                Programmed a web scraping tool using the BeautifulSoup, Requests, & Re libraries in Python.
+                            </li>
+                            <li>
+                                Utilized BeautifulSoup’s HTML DOM parsing abilities to scrape item prices from Newegg.com; program displays the
+                                products’ names and information sorted by price
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
+            <div id="myModal_3" class="modal">
+                <div class="modalContent">
+                    <span class="close">&times;</span>
+                    <H3>Graphical Tic-Tac-Toe with AI</H3>
+                    <p>
+                        <ul>
+                            <li>
+                                Designed and developed a graphical tic-tac-toe program that accepts mouse input in Python.
+                            </li>
+                            <li>
+                                Implemented graphical user interface and event listeners using the Pygame library.
+                            </li>
+                            <li>
+                                Can be played PVP locally or against unbeatable artificial intelligence implemented via minimax algorithm.
+                            </li>
+                        </ul>
+                    </p>
+                </div>
+            </div>
         </section>
-
+        <!-- end of modals -->
         <!-- footer -->
         <footer class = "footer">
             <!--email stuff-->
@@ -153,6 +245,7 @@ auto-scroll up button; adjustments to flex layout; & logo functionality -->
         </footer>
 
         <a class="scroll_top" href="#top" id = "autoScroll"></a>
-        <script src="index.js"></script>
+        <script src="./JS/index.js"></script>
+        <script src="./JS/modals.js"></script>
     </body>
 </html>
